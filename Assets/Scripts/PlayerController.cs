@@ -1,18 +1,21 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] internal PlayerMovement playermove;
-    [SerializeField] internal PlayerInput playerin;
-    [SerializeField] internal PlayerColision playercol;
+    public float moveSpeed = 5f;
+    public float jumpForce = 3.5f;
+    public Transform ori;
+    public Camera camera;
+    private Rigidbody rb;
     void Start()
     {
-        
+        camera = GetComponentInChildren<Camera>();
+        rb = GetComponent<Rigidbody>();
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
